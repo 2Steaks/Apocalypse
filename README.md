@@ -21,6 +21,9 @@ I needed a Framework that worked for traditional websites, the only modern tools
     * _demand_ - file separated, less common components which are asyncrously downloaded on existance
 * **services** - a collection of utility modules
 
+## Goals
+* At the moment each _demand_ module is split off into it's own bundle, I'm thinking it would probably be better to chunk these modules until they reach a certain filesize
+
 ## installation
 ``` bash
 npm install
