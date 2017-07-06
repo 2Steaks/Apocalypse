@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Apocalypse</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: #486A87;
+            height: 20vh;
+            width: 100vw;
+            padding: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        header:hover {
+            background-color: #5A86AC;
+        }
+
+        .c-foo {
+            background-color: #B4B99C;
+            height: 60vh;
+            width: 100vw;
+            padding: 20px;
+            color: white;
+        }
+
+        footer {
+            background-color: #486A87;
+            height: 20vh;
+            width: 100vw;
+            padding: 20px;
+        }
+
+        p {
+            display: inline-block;
+            margin: 0;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header data-module-priority="header">Click Me</header>
+        <main>
+            <div class="c-foo" data-module="foo">Should I cease to exist my script will no longer be downloaded and executed</div>
+        </main>
+        <footer data-module-common="footer"></footer>
+    </div>
+
+    <script type="text/javascript" src="/assets/js/runtime.bundle.js" defer></script>
+    <script type="text/javascript" src="/assets/js/vendor.bundle.js" defer></script>
+    <script type="text/javascript" src="/assets/js/apocalypse.bundle.js" defer></script>
+</body>
+</html>
