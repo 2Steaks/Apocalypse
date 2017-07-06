@@ -21,7 +21,7 @@ I needed a Framework that worked for traditional websites, the only modern tools
     * _demand_ - file separated, less common components which are asyncrously downloaded on existance
 * **services** - a collection of utility modules
 
-# Hooks
+## Hooks
 
 ### beforeModules
 All logic that needs to execute before any module is loaded should go here.
@@ -33,7 +33,7 @@ Logic that needs to execute after all the modules is loaded should go here.
 Any third party script that might have a global effect can be broken down here.
 
 
-# Modules
+## Modules
 This is the base class for all modules.
 
 ## Properties
