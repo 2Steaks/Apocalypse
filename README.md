@@ -68,9 +68,7 @@ this.media_query = this.break_point.small;
 A list of available actions.
 
 ### debug
-Decorated console.log message
-
-!>Disabled outside of local development
+Decorated console.log message. Disabled outside of local development
 
 ```javascript
 error(error) {
