@@ -78,7 +78,7 @@ error(error) {
 }
 
 // Result
-[TOOLKIT LOG - module_name] error logging [Object]
+[APOCALYPSE LOG - module_name] error logging [Object]
 ```
 
 ### broadcast
