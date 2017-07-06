@@ -1,5 +1,5 @@
 # Apocalypse
-JavaScript framework for traditional websites
+This is a super simple JavaScript framework built for traditional websites. It works, but it's basic and needs a lot of attention.
 
 ## Why build another framework?
 I needed a Framework that worked for traditional websites, the only modern tools I see released these days are that of Single Page Application Frameworks, libraries such as Angular, Ember and React. These Frameworks are amazing, but they don't help us very much if we want to build a Drupal site with server rendered templates.
@@ -20,6 +20,17 @@ I needed a Framework that worked for traditional websites, the only modern tools
     * _common_ - concatinated group of below fold, common components such as footers, articles and sidebars. This file is asyncrously downloaded and excuted immediately after _priority_
     * _demand_ - file separated, less common components which are asyncrously downloaded on existance
 * **services** - a collection of utility modules
+
+## installation
+``` bash
+npm install
+```
+
+## Usage
+``` bash
+npm run-script dev
+npm run-script build
+```
 
 ## Hooks
 
