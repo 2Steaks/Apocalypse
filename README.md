@@ -128,7 +128,7 @@ This combination enables users with accessability needs to engage with our compo
 returns true IF the action was a mouse click OR the SPACE/ENTER key was pressed.
 ```javascript
 bindEvents() {
-    this.element.on('click keydown', eventFired);
+    this.element.on('click keydown', this.eventFired);
 }
 
 eventFired(event) {
