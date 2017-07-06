@@ -26,7 +26,7 @@ I needed a Framework that worked for traditional websites, the only modern tools
 * I have left styling out of this project (for now) but I could do with some suggestions with regards to automating above and below fold css compilation. Like styles compiled from _priority_ might be used as critical render blocking css but then everything from _common_ and _demand_ gets concatinated and asynchronously loaded in later.
 * Better naming conventions, better architecture, better documentation etc
 
-## installation
+## Installation
 ``` bash
 npm install
 ```
@@ -52,38 +52,38 @@ Any third party script that might have a global effect can be broken down here.
 ## Modules
 This is the base class for all modules.
 
-## Properties
+### Properties
 A list of available properties.
 
-### node
+#### node
 This is the raw DOM node that you attached the data-module(-*) attribute to.
 ```javascript
 this.width = this.node.style.width;
 ```
 
-### element
+#### element
 This is the jQuery selected DOM node
 ```javascript
 this.height = this.element.height();
 ```
 
-### dom
+#### dom
 This contains common DOM nodes such as window, document, body etc... Cached into a single object
 ```javascript
  // jQuery selected window element
 this.window_height = this.dom.window.height();
 ```
 
-### break_point
+#### break_point
 ```javascript
  // 768px
 this.media_query = this.break_point.small;
 ```
 
-## Actions
+### Actions
 A list of available actions.
 
-### debug
+#### debug
 Decorated console.log message. Disabled outside of local development
 
 ```javascript
@@ -95,7 +95,7 @@ error(error) {
 [APOCALYPSE LOG - module_name] error logging [Object]
 ```
 
-### broadcast
+#### broadcast
 Allows us to effectively communicate with other components
 ```javascript
 // example component
@@ -104,7 +104,7 @@ speakToFriend() {
 }
 ```
 
-### onmessage
+#### onmessage
 This method allows us to receive broadcasts from other components.
 ```javascript
 // another component
@@ -128,7 +128,7 @@ onmessage(name, data) {
 }
 ```
 
-### accessible
+#### accessible
 This combination enables users with accessability needs to engage with our components va the keyboard.<br>
 returns true IF the action was a mouse click OR the SPACE/ENTER key was pressed.
 ```javascript
@@ -144,10 +144,10 @@ eventFired(event) {
 }
 ```
 
-## Methods
+### Methods
 A list of available methods
 
-### init
+#### init
 Where it all begins
 ```javascript
 init() {
@@ -156,7 +156,7 @@ init() {
 }
 ```
 
-### destroy
+#### destroy
 Where it all (should) end
 ```javascript
 destroy() {
