@@ -21,9 +21,10 @@ I needed a Framework that worked for traditional websites, the only modern tools
     * _demand_ - file separated, less common components which are asyncrously downloaded on existance
 * **services** - a collection of utility modules
 
-## Goals
+## Goals/Needs
 * At the moment each _demand_ module is split off into it's own bundle, I'm thinking it would probably be better to chunk these modules until they reach a certain filesize
 * I have left styling out of this project (for now) but I could do with some suggestions with regards to automating above and below fold css compilation. Like styles compiled from _priority_ might be used as critical render blocking css but then everything from _common_ and _demand_ gets concatinated and asynchronously loaded in later.
+* Better naming conventions, architecure etc
 
 ## installation
 ``` bash
