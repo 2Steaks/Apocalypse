@@ -46,7 +46,7 @@ this.width = this.node.style.width;
 ```
 
 ### element
-This is the jQuery selected DOM [node](javascript/modules?id=node)
+This is the jQuery selected DOM node
 ```javascript
 this.height = this.element.height();
 ```
@@ -89,7 +89,7 @@ speakToFriend() {
 ```
 
 ### onmessage
-This method allows us to receive [broadcasts](javascript/modules?id=broadcast) from other components.
+This method allows us to receive broadcasts from other components.
 ```javascript
 // another component
 constructor(application, node, config, name) {
