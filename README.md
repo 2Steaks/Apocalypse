@@ -23,7 +23,6 @@ I needed a Framework that worked for traditional websites, the only modern tools
 
 # Hooks
 
-## Application Level
 ### beforeModules
 All logic that needs to execute before any module is loaded should go here.
 
@@ -32,35 +31,6 @@ Logic that needs to execute after all the modules is loaded should go here.
 
 ### destroyAddons
 Any third party script that might have a global effect can be broken down here.
-
-## Module Level
-### breakpoint
-```javascript
-// another component
-constructor(application, node, config, name) {
-    super(application, node, config, name);
-
-    // specify broadcast
-    this.messages = ['breakpoint'];
-}
-
-...
-
-// listen for broadcasts
-onmessage(name, data) {
-    switch(name) {
-        case 'breakpoint':
-            this.breakPoint(data);
-            break;
-    }
-}
-
-breakPoint(data) {
-    if(data.breakpoint === 'mobile' && data.matches) {
-        // do stuff
-    }
-}
-```
 
 
 # Modules
