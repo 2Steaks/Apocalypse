@@ -27,6 +27,7 @@ I needed a Framework that worked for traditional websites, the only modern tools
 * Better naming conventions, better architecture, better error handling, better documentation etc
 
 ## Installation
+You'll need to download and treat this project like scaffolding.
 ``` bash
 yarn install
 ```
