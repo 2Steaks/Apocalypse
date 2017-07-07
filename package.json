@@ -18,11 +18,13 @@
         "eslint": "^3.12.2",
         "eslint-loader": "^1.6.3",
         "webpack": "^3.0.0",
-        "webpack-dev-server": "^2.5.0"
+        "webpack-dev-server": "^2.5.1"
     },
     "dependencies": {
         "jquery": "^2.2.4",
         "sizzle": "^2.3.3"
     },
-    "optionalDependencies": {}
+    "optionalDependencies": {},
+    "repository": "https://github.com/benjo696/Apocalypse.git",
+    "license": "MIT"
 }
