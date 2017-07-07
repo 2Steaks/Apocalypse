@@ -78,7 +78,7 @@ export default class {
      */
     demand(path, resolve, reject) {
 
-        import ( /* webpackMode: "lazy", webpackChunkName: "demand-[request]" */ `../modules/demand/${path}`).then(Bundle => {
+        import ( /* webpackMode: "lazy", webpackChunkName: "demand-[index]" */ `../modules/demand/${path}`).then(Bundle => {
             resolve(Bundle);
         }).catch(err => {
             reject(err);
