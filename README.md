@@ -5,7 +5,7 @@ This is a super simple JavaScript framework built for traditional websites. It w
 I needed a Framework that worked for traditional websites, the only modern tools I see released these days are that of Single Page Application Frameworks, libraries such as Angular, Ember and React. These Frameworks are amazing, but they don't help us very much if we want to build a Drupal site with server rendered templates.
 
 ### This framework provides the following:
-* Object-orientated
+* OOP
 * Modern ES2015 JavaScript, especially **modules**
 * Automatic separation of above and below fold execution, optimising for the fastest possible page load
 * Simplified asynchronous loading of JavaScript if and when it is required
@@ -22,6 +22,7 @@ I needed a Framework that worked for traditional websites, the only modern tools
 * **services** - a collection of utility modules
 
 ## Goals/Needs
+* Need to add a function to recollect elements that have been added dynamically after page load
 * At the moment each _demand_ module is split off into it's own bundle, I'm thinking it would probably be better to chunk these modules until they reach a certain filesize
 * I have left styling out of this project (for now) but I could do with some suggestions with regards to automating above and below fold css compilation. Like styles compiled from _priority_ might be used as critical render blocking css but then everything from _common_ and _demand_ gets concatinated and asynchronously loaded in later.
 * Better naming conventions, better architecture, better documentation etc
