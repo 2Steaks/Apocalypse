@@ -18,7 +18,7 @@ I needed a Framework that worked for traditional websites, the only modern tools
 * **modules** - this is where the majority of your code will exist
     * _priority_ - immediate execution for above fold content such as top navigation menus or hero banners
     * _common_ - concatinated group of below fold, common components such as footers, articles and sidebars. This file is asyncrously downloaded and excuted immediately after _priority_
-    * _demand_ - chunk separated bundles which will split when the filesize reaches a limit. These less common components are asyncrously downloaded only on existance
+    * _demand_ - chunk separated bundles which will split when the bundle's file size reaches a limit. These less common components are asyncrously downloaded only on existance
 * **services** - a collection of utility modules
 
 ## Goals/Needs
