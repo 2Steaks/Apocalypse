@@ -29,13 +29,13 @@ I needed a Framework that worked for traditional websites, the only modern tools
 
 ## Installation
 ``` bash
-npm install
+yarn install
 ```
 
 ## Usage
 ``` bash
-npm run-script dev
-npm run-script build
+yarn run dev
+yarn run build
 ```
 
 ## Hooks
