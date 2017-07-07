@@ -18,12 +18,11 @@ I needed a Framework that worked for traditional websites, the only modern tools
 * **modules** - this is where the majority of your code will exist
     * _priority_ - immediate execution for above fold content such as top navigation menus or hero banners
     * _common_ - concatinated group of below fold, common components such as footers, articles and sidebars. This file is asyncrously downloaded and excuted immediately after _priority_
-    * _demand_ - file separated, less common components which are asyncrously downloaded on existance
+    * _demand_ - chunk separated bundles which will split when the filesize reaches a limit. These less common components are asyncrously downloaded only on existance
 * **services** - a collection of utility modules
 
 ## Goals/Needs
 * Need to add a function to recollect elements that have been added dynamically after page load
-* At the moment each _demand_ module is split off into it's own bundle, I'm thinking it would probably be better to chunk these modules until they reach a certain filesize
 * I have left styling out of this project (for now) but I could do with some suggestions with regards to automating above and below fold css compilation. Like styles compiled from _priority_ might be used as critical render blocking css but then everything from _common_ and _demand_ gets concatinated and asynchronously loaded in later.
 * Better naming conventions, better architecture, better error handling, better documentation etc
 

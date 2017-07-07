@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const packageJosn = require('./package.json');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     resolve: {
@@ -39,6 +40,10 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor', 'runtime']
         }),
+        new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 10,
+            minChunkSize: 1000
+        }),
         new webpack.DefinePlugin({
             'process.env': {
                 VERSION: JSON.stringify(packageJosn.version)
@@ -68,7 +73,8 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        })
+        }),
+        new CompressionPlugin()
     ]);
 }
 else {
