@@ -8,7 +8,7 @@ I needed a Framework that worked for traditional websites, the only modern tools
 * OOP
 * Modern ES2015 JavaScript, especially **modules**
 * Automatic separation of above and below fold execution, optimising for the fastest page load possible
-* Simplified asynchronous loading of JavaScript if and when it is required
+* Simplified asynchronous loading of scripts only when a component exists on the page
 * Effortless DOM bindings provided by a simple **data attribute** which contain a **direct path to the JavaScript module itself!** No more confusion about where JavaScript is being executed from and on which element.
 * Fully encapsulated component logic, save for hooks that allow them to communicate in a clean and controlled manner
 
