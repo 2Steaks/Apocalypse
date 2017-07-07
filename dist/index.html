@@ -25,12 +25,23 @@
             background-color: #5A86AC;
         }
 
-        .c-foo {
-            background-color: #B4B99C;
-            height: 60vh;
+        .c-foo, .c-bar, .c-view {
+            height: 20vh;
             width: 100vw;
             padding: 20px;
             color: white;
+        }
+
+        .c-foo {
+            background-color: #B4B99C;
+        }
+
+        .c-bar {
+            background-color: #554FA4;
+        }
+
+        .c-view {
+            background-color: #554FA4;
         }
 
         footer {
@@ -54,6 +65,7 @@
         <header data-module-priority="header">Click Me</header>
         <main>
             <div class="c-foo" data-module="foo">Should I cease to exist my script will no longer be downloaded and executed</div>
+            <div class="c-bar" data-module="dir/bar">My script lives inside a nested directory</div>
         </main>
         <footer data-module-common="footer"></footer>
     </div>
