@@ -5,7 +5,7 @@ This is a super simple JavaScript framework built for traditional websites. It w
 I needed a Framework that worked for traditional websites, the only modern tools I see released these days are that of Single Page Application Frameworks, libraries such as Angular, Ember and React. These Frameworks are amazing, but they don't help us very much if we want to build a Drupal site with server rendered templates.
 
 ### This framework provides the following:
-* Object-orientated
+* OOP
 * Modern ES2015 JavaScript, especially **modules**
 * Automatic separation of above and below fold execution, optimising for the fastest possible page load
 * Simplified asynchronous loading of JavaScript if and when it is required
