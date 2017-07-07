@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const packageJosn = require('./package.json');
 const CompressionPlugin = require("compression-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     resolve: {
@@ -44,6 +45,7 @@ module.exports = {
             maxChunks: 5,
             minChunkSize: 1000
         }),
+        new CleanWebpackPlugin('dist/assets'),
         new webpack.DefinePlugin({
             'process.env': {
                 VERSION: JSON.stringify(packageJosn.version)
