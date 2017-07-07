@@ -28,7 +28,9 @@ I needed a Framework that worked for traditional websites, the only modern tools
 
 ## Installation
 ``` bash
-yarn install
+yarn add apocalypse
+# or
+npm install apocalypse
 ```
 
 ## Usage
