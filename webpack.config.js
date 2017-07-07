@@ -41,7 +41,7 @@ module.exports = {
             names: ['vendor', 'runtime']
         }),
         new webpack.optimize.LimitChunkCountPlugin({
-            maxChunks: 10,
+            maxChunks: 5,
             minChunkSize: 1000
         }),
         new webpack.DefinePlugin({
