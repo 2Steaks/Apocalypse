@@ -5,6 +5,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+    devtool: 'inline-source-map',
     resolve: {
         extensions: ['.js', '.json'],
         modules: [path.resolve('./src/js'), 'node_modules'],
@@ -78,8 +79,7 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new CompressionPlugin()
     ]);
-}
-else {
+} else {
     module.exports.devServer = {
         contentBase: './dist',
         publicPath: '/',

@@ -44,8 +44,10 @@ export default class {
                 module.init();
             else
                 console.warn(`Module ${module.constructor.name} is missing it's init function`);
-        }).catch((reason) => {
-            throw new Error(reason);
+        }).catch((error) => {
+            throw new Error(`
+                \n/**\n * Module: ${modulePath}\n * Type: ${error.name}\n * Message: ${error.message}\n */
+                \n${error.stack}`);
         });
 
     }
