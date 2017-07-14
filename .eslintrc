@@ -6,9 +6,12 @@
         "browser": true,
         "node": true
     },
+    "plugins": [
+        "html"
+    ],
     "rules": {
         "no-console": 0,
-        "no-global-assign": ["error", {"exceptions": ["console"]}]
+        "no-global-assign": ["error", { "exceptions": ["console"] }]
     },
     "globals": {
         "$": true

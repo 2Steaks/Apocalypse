@@ -38,6 +38,22 @@ yarn run dev
 yarn run build
 ```
 
+## Example
+``` html
+<!--
+Application will look inside modules/priority for Header.js
+-->
+<header data-module-priority="header"></header>
+<!--
+Application will look inside modules/demand for vue/App.js
+-->
+<div data-module="vue/app"></div>
+<!--
+Application will look inside modules/common for Footer.js
+-->
+<footer data-module-common="footer"></footer>
+```
+
 ## Hooks
 
 ### beforeModules
@@ -51,7 +67,20 @@ Any third party script that might have a global effect can be broken down here.
 
 
 ## Modules
-This is the base class for all modules.
+This is the bare minimum requirement for your new module.
+
+```javascript
+import Context from "Context";
+
+export default class extends Context {
+
+    // Mandatory - This function is the entry point for each module
+    init() {
+
+    }
+
+}
+```
 
 ### Properties
 A list of available properties.

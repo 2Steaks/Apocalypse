@@ -1,22 +1,23 @@
 const path = require('path');
 const webpack = require('webpack');
 const packageJosn = require('./package.json');
-const CompressionPlugin = require("compression-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     devtool: 'inline-source-map',
     resolve: {
-        extensions: ['.js', '.json'],
+        extensions: ['.js', '.json', '.vue'],
         modules: [path.resolve('./src/js'), 'node_modules'],
         alias: {
-            Context: path.resolve(__dirname, './src/js/core/Context.js')
+            Context: path.resolve(__dirname, './src/js/core/Context.js'),
+            'vue$': 'vue/dist/vue.common.js',
         }
     },
     entry: {
         vendor: [
             'jquery',
-            'sizzle'
+            'sizzle',
+            'vue'
         ],
         apocalypse: './src/js/entry.js'
     },
@@ -29,9 +30,12 @@ module.exports = {
     module: {
         rules: [{
             enforce: "pre",
-            test: /\.js$/,
+            test: /\.(js|vue)$/,
             loader: "eslint-loader",
             exclude: /node_modules/
+        }, {
+            test: /\.vue$/,
+            loader: 'vue-loader'
         }, {
             test: /\.js$/,
             loader: "babel-loader",
@@ -76,8 +80,7 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        }),
-        new CompressionPlugin()
+        })
     ]);
 } else {
     module.exports.devServer = {
