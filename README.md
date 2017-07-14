@@ -40,17 +40,13 @@ yarn run build
 
 ## Example
 ``` html
-<!--
-Application will look inside modules/priority for Header.js
--->
+<!-- Application will look inside modules/priority for Header.js -->
 <header data-module-priority="header"></header>
-<!--
-Application will look inside modules/demand for vue/App.js
--->
+
+<!-- Application will look inside modules/demand for vue/App.js -->
 <div data-module="vue/app"></div>
-<!--
-Application will look inside modules/common for Footer.js
--->
+
+<!-- Application will look inside modules/common for Footer.js -->
 <footer data-module-common="footer"></footer>
 ```
 
@@ -74,7 +70,7 @@ import Context from "Context";
 
 export default class extends Context {
 
-    // Mandatory - This function is the entry point for each module
+    // This function is the entry point for each module
     init() {
 
     }
