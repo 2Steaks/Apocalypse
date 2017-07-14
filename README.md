@@ -134,8 +134,8 @@ speakToFriend() {
 This method allows us to receive broadcasts from other components.
 ```javascript
 // another component
-constructor(application, node, config, name) {
-    super(application, node, config, name);
+constructor(params) {
+    super(params);
 
     // specify broadcast
     this.messages = ['notify'];
