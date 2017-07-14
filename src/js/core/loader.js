@@ -37,7 +37,13 @@ export default class {
         });
 
         split.then((Bundle) => {
-            let module = new Bundle.default(this._application, node, config, modulePath);
+            let module = new Bundle.default({
+                app: this._application,
+                node: node,
+                config: config,
+                path: modulePath
+            });
+
             this._application.instances.push(module);
 
             if (typeof module.init === 'function')

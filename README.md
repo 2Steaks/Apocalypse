@@ -63,7 +63,7 @@ Any third party script that might have a global effect can be broken down here.
 
 
 ## Modules
-This is the bare minimum requirement for your new module.
+This is the bare minimum needed for your new module.
 
 ```javascript
 import Context from "Context";

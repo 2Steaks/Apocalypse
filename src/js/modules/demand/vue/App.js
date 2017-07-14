@@ -6,12 +6,12 @@ export default class extends Context {
     /**
      *
      */
-    constructor(application, node, config, name) {
+    constructor(params) {
 
-        super(application, node, config, name);
+        super(params);
 
         this.app = new Vue({
-            el: `#${node.getAttribute('id')}`,
+            el: `#${params.node.getAttribute('id')}`,
             render: h => h(Root)
         });
 

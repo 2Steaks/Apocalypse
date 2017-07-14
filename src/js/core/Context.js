@@ -2,18 +2,18 @@ import debug from '../services/debug';
 
 export default class {
 
-    constructor(application, node, config, name) {
+    constructor(params) {
         this.name = name;
         // application scope access
-        this._application = application;
+        this._application = params.app;
         // raw dom node
-        this.node = node;
+        this.node = params.node;
         // jquery selected
-        this.element = $(node);
+        this.element = $(params.node);
         // global dom nodes i.e window, body
-        this.dom = config.dom;
+        this.dom = params.config.dom;
         // breakpoints i.e mobile, tablet, desktop
-        this.break_point = config.breakpoint;
+        this.break_point = params.config.breakpoint;
         // flag to remind application that this module has already been initialised
         this.node.setAttribute('data-module-executed', true);
         // module debugger

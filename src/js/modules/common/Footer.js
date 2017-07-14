@@ -2,9 +2,9 @@ import Context from "Context";
 
 export default class extends Context {
 
-    constructor(application, node, config, name) {
+    constructor(params) {
 
-        super(application, node, config, name);
+        super(params);
 
         this.messages = ['shoutOut'];
 
@@ -22,7 +22,7 @@ export default class extends Context {
     }
 
     onmessage(name, data) {
-        switch(name) {
+        switch (name) {
             case 'shoutOut':
                 this.listen(data);
                 break;
