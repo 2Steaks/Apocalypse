@@ -1,7 +1,8 @@
+import Context from "Context";
 import Vue from 'vue';
 import Root from './Root';
 
-export default class extends Vue {
+export default class extends Context {
     /**
      *
      */
