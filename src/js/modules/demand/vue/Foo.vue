@@ -9,7 +9,6 @@
 export default {
     methods: {
         changeView() {
-            console.log('test');
             this.$parent.view = 'Bar';
         }
     }
