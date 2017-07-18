@@ -3,7 +3,7 @@ import debug from '../services/debug';
 export default class {
 
     constructor(params) {
-        this.name = name;
+        this.name = params.path;
         // application scope access
         this._application = params.app;
         // raw dom node
@@ -17,7 +17,7 @@ export default class {
         // flag to remind application that this module has already been initialised
         this.node.setAttribute('data-module-executed', true);
         // module debugger
-        this.debug = debug.log(name);
+        this.debug = debug.log(params.path);
     }
 
     /**
